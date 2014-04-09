@@ -29,7 +29,6 @@ if [[ $OS_TYPE == "Darwin" ]];
   then
 	# Turn on color ls, unalias it, and append / to directories
 	export CLICOLOR="YES"
-	unalias ls
 	alias ls='ls -F'
 
 	ZSH_THEME="osx"
