@@ -46,7 +46,6 @@ def replace_files
 end
 
 def link_file(src, target)
-  puts "sym linking"
   system "ln -fs #{src} #{target}"
 end
 
