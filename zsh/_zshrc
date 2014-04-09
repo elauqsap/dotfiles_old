@@ -28,9 +28,8 @@ ZSH_CUSTOM=$HOME/dotfiles
 if [[ $OS_TYPE == "Darwin" ]];
   then
 	# Turn on color ls, unalias it, and append / to directories
-	export CLICOLOR="YES"
-	export LSCOLORS='exfxcxdxbxagadabagacad'
-	alias ls='ls -F'
+	export CLICOLOR=1
+	alias ls='ls -F -G'
 
 	ZSH_THEME="osx"
   plugins=(git ruby rvm brew osx docker encode64 gem npm screen rails urltools web-search wd zeus)
@@ -49,3 +48,4 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export LSCOLORS='exfxcxdxbxagadabagacad'
