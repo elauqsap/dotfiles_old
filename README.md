@@ -5,7 +5,7 @@ Repo to automate my personal environment... because there was awesome lazy peopl
 ## Functionality
 - [  ] OS X personalization
 - [  ] Linux personalization
-- [  ] Development Environment 
+- [  ] Development Environment
 
 ## Installation
 TODO

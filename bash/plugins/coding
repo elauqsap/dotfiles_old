@@ -1,0 +1,24 @@
+# alias some commonly used git commands
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gm='git commit -m'
+
+# gc      => git checkout master
+# gc bugs => git checkout bugs
+function gc() {
+	if [ -z "$1" ]; then
+		git checkout master
+	else
+		git checkout $1
+	fi
+}
+
+# some aliases for bundler recommented from
+# http://ryan.mcgeary.org/2011/02/09/vendor-everything-still-applies/
+alias b="bundle"
+alias biv="b install --path vendor"
+alias bil="bi --local"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"

@@ -1,0 +1,51 @@
+# Path to oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+# Get the OS shorthand
+export OS_TYPE=$(uname -s)
+
+which node 1> /dev/null
+if [ $? -eq 0 ]; then
+	export NODE_VERSION=$(node -v)
+fi
+
+# Aliases
+alias zshrc='vim ~/.zshrc'
+alias grep='grep --color=auto'
+alias egrep='grep -e --color=auto'
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+
+#umask
+umask 077
+
+# ignore duplicate lines and lines beginning with space
+HISTCONTROL=ignoreboth
+
+# My zsh configs
+ZSH_CUSTOM=$HOME/dotfiles
+
+# Load plugins and extras
+if [[ $OS_TYPE == "Darwin" ]];
+  then
+	# Turn on color ls, unalias it, and append / to directories
+	export CLICOLOR="YES"
+	unalias ls
+	alias ls='ls -F'
+
+	ZSH_THEME="osx"
+  plugins=(git ruby rvm brew osx docker encode64 gem npm screen rails urltools web-search wd zeus)
+	source $DOT/osx-extras.sh
+elif [[ $OS_TYPE == "Linux" ]];
+  then
+  ZSH_THEME="nux"
+  plugins=(git ruby rvm debian encode64 gem npm screen rails urltools wd zeus)
+	source $DOT/nux-extras.sh
+fi
+
+source $ZSH/oh-my-zsh.sh
+
+# Load rvm into shell as a function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8

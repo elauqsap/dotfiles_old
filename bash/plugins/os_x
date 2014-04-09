@@ -1,0 +1,10 @@
+if [[ $OSTYPE = darwin* ]]; then
+
+# Turn on color ls
+export CLICOLOR="YES"
+
+# Override ls alias
+unalias ls
+alias ls='ls -F'
+
+fi #$OSTYPE darwin
