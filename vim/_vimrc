@@ -4,6 +4,8 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+set laststatus=2
+
 " Don't be like vi
 set nocompatible
 

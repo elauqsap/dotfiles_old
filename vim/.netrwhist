@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/pdagosti/blah'
 let g:netrw_dirhist_2='/Users/pdagosti/.tannergit'
 let g:netrw_dirhist_3='/Users/pdagosti/gitRepos/fuse/lib/tasks'
 let g:netrw_dirhist_4='/Users/pdagosti/Documents/workspace/.metadata/.plugins/org.eclipse.recommenders.rcp/repository/org/eclipse'
 let g:netrw_dirhist_5='/Users/pdagosti/.zshconfs/themes'
 let g:netrw_dirhist_6='/Users/pdagosti/sublime'
+let g:netrw_dirhist_7='/Users/pdagosti/gitRepos/fuse/app/assets/content/text'

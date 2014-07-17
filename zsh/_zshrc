@@ -14,6 +14,9 @@ alias zshrc='vim ~/.zshrc'
 alias grep='grep --color=auto'
 alias egrep='grep -e --color=auto'
 alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+alias startdev='/Applications/VMware\ Fusion.app/Contents/Library/vmrun -T fusion start ~/Documents/Virtual\ Machines.localized/eOS-Dev.vmwarevm/eOS-Dev.vmx nogui &'
+alias herkules='ssh pdagp@herkules'
+alias mountvm='mount_smbfs //pdagp@herkules/pdagp ~/herkules'
 
 #umask
 umask 077
@@ -48,4 +51,4 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-export LSCOLORS='exfxcxdxbxagadabagacad'
+export LSCOLORS='gxfxcxdxbxegedabagacad'
