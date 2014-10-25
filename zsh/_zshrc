@@ -17,6 +17,8 @@ alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
 alias startdev='/Applications/VMware\ Fusion.app/Contents/Library/vmrun -T fusion start ~/Documents/Virtual\ Machines.localized/eOS-Dev.vmwarevm/eOS-Dev.vmx nogui &'
 alias herkules='ssh pdagp@herkules'
 alias mountvm='mount_smbfs //pdagp@herkules/pdagp ~/herkules'
+alias encrypt='openssl enc -aes-256-cbc -salt'
+alias decrypt='openssl enc -d -aes-256-cbc'
 
 #umask
 umask 077
@@ -33,7 +35,7 @@ if [[ $OS_TYPE == "Darwin" ]];
 	# Turn on color ls, unalias it, and append / to directories
 	export CLICOLOR=1
 	alias ls='ls -F -G'
-
+	alias vtop='vtop --theme wizard'
 	ZSH_THEME="osx"
   plugins=(git ruby rvm brew osx docker encode64 gem npm screen rails urltools web-search wd zeus)
 	source $ZSH_CUSTOM/osx-extras.sh
